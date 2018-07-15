@@ -1,0 +1,17 @@
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/xunit.runner.utility.netcoreapp10.dll
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/Algorithms.Test.deps.json
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/Algorithms.Test.runtimeconfig.json
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/Algorithms.Test.runtimeconfig.dev.json
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/Algorithms.Test.dll
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/Algorithms.Test.pdb
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/AlgorithmsLib.dll
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/bin/Debug/netcoreapp2.0/AlgorithmsLib.pdb
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/obj/Debug/netcoreapp2.0/Algorithms.Test.csprojResolveAssemblyReference.cache
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/obj/Debug/netcoreapp2.0/Algorithms.Test.csproj.CoreCompileInputs.cache
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/obj/Debug/netcoreapp2.0/Algorithms.Test.AssemblyInfoInputs.cache
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/obj/Debug/netcoreapp2.0/Algorithms.Test.AssemblyInfo.cs
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/obj/Debug/netcoreapp2.0/Algorithms.Test.csproj.CopyComplete
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/obj/Debug/netcoreapp2.0/Algorithms.Test.dll
+/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms.Test/obj/Debug/netcoreapp2.0/Algorithms.Test.pdb

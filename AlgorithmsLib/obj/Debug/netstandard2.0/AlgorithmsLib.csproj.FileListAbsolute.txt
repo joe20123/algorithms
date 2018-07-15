@@ -1,0 +1,9 @@
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/bin/Debug/netstandard2.0/AlgorithmsLib.deps.json
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/bin/Debug/netstandard2.0/AlgorithmsLib.dll
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/bin/Debug/netstandard2.0/AlgorithmsLib.pdb
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.csprojResolveAssemblyReference.cache
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.csproj.CoreCompileInputs.cache
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.AssemblyInfoInputs.cache
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.AssemblyInfo.cs
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.dll
+/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.pdb
