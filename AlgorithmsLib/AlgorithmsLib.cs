@@ -305,6 +305,44 @@ namespace AlgorithmsLibrary
             return MergeTwoSortedList(leftArray, rightArray);
         }
 
+        // Q12: Quick sort
+        // (low, high) are the array 
+        public int Partition(int[] input, int low, int high)
+        {
+            if (input == null) return -1;
+            int pivot = input[low];
+            int l = low;
+            int h = high;
+
+            while (l < h)
+            {
+                while (input[l] <= pivot && l < h)
+                {
+                    l++;
+                }
+                while (input[h] > pivot)
+                {
+                    h++;
+                }
+                if (l < h)
+                {
+                    (input[l], input[h]) = (input[h], input[l]);
+                }
+            }
+            (input[low], input[h]) = (input[h], input[low]);
+
+            return h;
+        }
+
+        public void QuickSort(int[] input, int left, int right)
+        {
+            if (left > right)
+                return;
+            int pivotIndex = Partition(input, left, right);
+            QuickSort(input, left, pivotIndex - 1);
+            QuickSort(input, pivotIndex + 1, right);
+        }
+
     }
 
 
