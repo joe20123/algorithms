@@ -680,35 +680,37 @@
     ]
   },
   "packageFolders": {
-    "/Users/joe/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Joseph.Wu\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms/Algorithms.csproj",
+      "projectUniqueName": "C:\\Dev\\C#\\algorithms\\Algorithms\\Algorithms.csproj",
       "projectName": "Algorithms",
-      "projectPath": "/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms/Algorithms.csproj",
-      "packagesPath": "/Users/joe/.nuget/packages/",
-      "outputPath": "/Users/joe/Desktop/DEV/C#/Algorithms/Algorithms/obj/",
+      "projectPath": "C:\\Dev\\C#\\algorithms\\Algorithms\\Algorithms.csproj",
+      "packagesPath": "C:\\Users\\Joseph.Wu\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\C#\\algorithms\\Algorithms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/joe/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Joseph.Wu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/AlgorithmsLib.csproj": {
-              "projectPath": "/Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/AlgorithmsLib.csproj"
+            "C:\\Dev\\C#\\algorithms\\AlgorithmsLib\\AlgorithmsLib.csproj": {
+              "projectPath": "C:\\Dev\\C#\\algorithms\\AlgorithmsLib\\AlgorithmsLib.csproj"
             }
           }
         }

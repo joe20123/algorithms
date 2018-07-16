@@ -7,3 +7,12 @@
 /Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.AssemblyInfo.cs
 /Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.dll
 /Users/joe/Desktop/DEV/C#/Algorithms/AlgorithmsLib/obj/Debug/netstandard2.0/AlgorithmsLib.pdb
+c:\Dev\C#\algorithms\AlgorithmsLib\bin\Debug\netstandard2.0\AlgorithmsLib.deps.json
+c:\Dev\C#\algorithms\AlgorithmsLib\bin\Debug\netstandard2.0\AlgorithmsLib.dll
+c:\Dev\C#\algorithms\AlgorithmsLib\bin\Debug\netstandard2.0\AlgorithmsLib.pdb
+c:\Dev\C#\algorithms\AlgorithmsLib\obj\Debug\netstandard2.0\AlgorithmsLib.csprojAssemblyReference.cache
+c:\Dev\C#\algorithms\AlgorithmsLib\obj\Debug\netstandard2.0\AlgorithmsLib.csproj.CoreCompileInputs.cache
+c:\Dev\C#\algorithms\AlgorithmsLib\obj\Debug\netstandard2.0\AlgorithmsLib.AssemblyInfoInputs.cache
+c:\Dev\C#\algorithms\AlgorithmsLib\obj\Debug\netstandard2.0\AlgorithmsLib.AssemblyInfo.cs
+c:\Dev\C#\algorithms\AlgorithmsLib\obj\Debug\netstandard2.0\AlgorithmsLib.dll
+c:\Dev\C#\algorithms\AlgorithmsLib\obj\Debug\netstandard2.0\AlgorithmsLib.pdb
