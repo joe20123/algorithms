@@ -322,7 +322,7 @@ namespace AlgorithmsLibrary
                 }
                 while (input[h] > pivot)
                 {
-                    h++;
+                    h--;
                 }
                 if (l < h)
                 {
