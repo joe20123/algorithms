@@ -49,12 +49,23 @@ namespace Algorithms.Test
 
         [Theory]
         [InlineData(new int[] { 5,2,76, 1,34}, new int[] { 1, 2,5, 34, 76})]
-        [InlineData(new int[] { 5}, new int[] { 5 })]
+        [InlineData(new int[] { 5 }, new int[] { 5 })]
         public void MergeSort_ShouldMergeSortSuccessful(int[] input, int[] expected)
         {
             AlgorithmsLib al = new AlgorithmsLib();
             int[] result = al.MergeSort(input);
             Assert.True(result.SequenceEqual(expected));
+        }
+
+        [Theory]
+        [InlineData(new int[] { 5, 2, 76, 1, 34}, new int[] { 1, 2, 5, 34, 76})]
+        [InlineData(new int[] { 2349, 1388, 90, 45221, 4523, 2348, -1, 954}, new int[] { -1, 90, 954, 1388, 2348, 2349, 4523, 45221})]
+        [InlineData(new int[] { 5 }, new int[] { 5 })]        
+        public void QuickSort_ShouldBeSuccessfully(int[] input, int[] expected)
+        {
+            AlgorithmsLib al = new AlgorithmsLib();
+            al.QuickSort(input, 0, input.Length - 1);
+            Assert.True(input.SequenceEqual(expected));
         }
     }
 }

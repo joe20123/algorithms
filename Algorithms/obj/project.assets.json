@@ -686,11 +686,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\C#\\algorithms\\Algorithms\\Algorithms.csproj",
+      "projectUniqueName": "c:\\Dev\\C#\\algorithms\\Algorithms\\Algorithms.csproj",
       "projectName": "Algorithms",
-      "projectPath": "C:\\Dev\\C#\\algorithms\\Algorithms\\Algorithms.csproj",
+      "projectPath": "c:\\Dev\\C#\\algorithms\\Algorithms\\Algorithms.csproj",
       "packagesPath": "C:\\Users\\Joseph.Wu\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\C#\\algorithms\\Algorithms\\obj\\",
+      "outputPath": "c:\\Dev\\C#\\algorithms\\Algorithms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -709,8 +709,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Dev\\C#\\algorithms\\AlgorithmsLib\\AlgorithmsLib.csproj": {
-              "projectPath": "C:\\Dev\\C#\\algorithms\\AlgorithmsLib\\AlgorithmsLib.csproj"
+            "c:\\Dev\\C#\\algorithms\\AlgorithmsLib\\AlgorithmsLib.csproj": {
+              "projectPath": "c:\\Dev\\C#\\algorithms\\AlgorithmsLib\\AlgorithmsLib.csproj"
             }
           }
         }
