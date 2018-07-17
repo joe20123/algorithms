@@ -305,7 +305,7 @@ namespace AlgorithmsLibrary
             return MergeTwoSortedList(leftArray, rightArray);
         }
 
-        // Q12: Quick sort
+     // Q12: Quick sort
         // (low, high) are the array 
         public int Partition(int[] input, int low, int high)
         {
@@ -342,7 +342,7 @@ namespace AlgorithmsLibrary
             QuickSort(input, left, pivotIndex - 1);
             QuickSort(input, pivotIndex + 1, right);
         }
-
+        
     }
 
 
