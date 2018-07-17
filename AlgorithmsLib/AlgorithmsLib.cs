@@ -305,7 +305,7 @@ namespace AlgorithmsLibrary
             return MergeTwoSortedList(leftArray, rightArray);
         }
 
-     // Q12: Quick sort
+        // Q12: Quick sort
         // (low, high) are the array 
         public int Partition(int[] input, int low, int high)
         {
@@ -343,6 +343,28 @@ namespace AlgorithmsLibrary
             QuickSort(input, pivotIndex + 1, right);
         }
         
+        // Q13: Binary Search. O(LogN)
+        public int BinarySearch(int[] input, int number)
+        {
+            if (input == null) return -1;
+            
+            int low = 0;
+            int high = input.Length - 1;
+
+            while(low <= high)
+            {
+                var mid = (low + high) / 2 + low;
+                if (input[mid] == number)
+                {
+                    return mid;
+                }
+                if (input[mid] > number)
+                    high--;
+                if (input[mid] < number)
+                    low++;
+            }
+            return -1;
+        }
     }
 
 

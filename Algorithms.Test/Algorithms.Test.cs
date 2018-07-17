@@ -67,5 +67,16 @@ namespace Algorithms.Test
             al.QuickSort(input, 0, input.Length - 1);
             Assert.True(input.SequenceEqual(expected));
         }
+
+        [Theory]
+        [InlineData(new int[] { 5, 2, 76, 1, 34}, 34, 4)]
+        [InlineData(new int[] { 2349, 1388, 90, 45221, 4523, 2348, -1, 954}, 90, 2)]
+        [InlineData(new int[] { 5 }, 5, 0)]   
+        public void BinarySearch_ShouldPass(int[] input, int valueToSearch, int expectedIndex)
+        {
+            AlgorithmsLib al = new AlgorithmsLib();
+            var result = al.BinarySearch(input, valueToSearch);
+            Assert.True(result == expectedIndex);  
+        }
     }
 }
