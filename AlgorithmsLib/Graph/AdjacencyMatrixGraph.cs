@@ -48,5 +48,21 @@ namespace AlgorithmsLibGraph
             }
             return list;
         }
+
+        public int GetInDegree(int v)
+        {
+            if (v < 0 || v >= numVertices)
+                throw new ArgumentOutOfRangeException("vertice number is out of range.");
+
+            var count = 0;
+            for (var i = 0; i < numVertices; i++)
+            {
+                if (i == v) continue;
+
+                if (AdjacencyMatrix[i, v] == 1)
+                    count++;
+            }
+            return count;
+        }
     }
 }

@@ -2,6 +2,8 @@ using System;
 using Xunit;
 using AlgorithmsLibrary;
 using System.Linq;
+using AlgorithmsLibGraph;
+using System.Collections.Generic;
 
 namespace Algorithms.Test
 {
@@ -77,6 +79,62 @@ namespace Algorithms.Test
             AlgorithmsLib al = new AlgorithmsLib();
             var result = al.BinarySearch(input, valueToSearch);
             Assert.True(result == expectedIndex);  
+        }
+
+        [Fact]
+        public void AdjacencyMatrix_CanInstantiate()
+        {
+            AdjacencyMatrixGraph am = new AdjacencyMatrixGraph(3, GraphType.Directed);
+
+            Assert.NotNull(am);
+        }
+        
+        [Fact]
+        public void AdjacencyMatrix_addEdge_hasCorrectValue()
+        {
+            AdjacencyMatrixGraph am = new AdjacencyMatrixGraph(3, GraphType.Directed);
+            am.addEdge(1, 2);
+            am.addEdge(0, 1);
+
+            Assert.Equal(am.AdjacencyMatrix[1, 2] , 1);
+            Assert.Equal(am.AdjacencyMatrix[0, 2] , 0);
+        }
+
+        [Fact]
+        public void AdjacencyMatrix_addEdte_throwErrorWithIncorrectInputs()
+        {
+            AdjacencyMatrixGraph am = new AdjacencyMatrixGraph(3, GraphType.Directed);
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => am.addEdge(-1, 0));
+        }
+
+        [Fact]
+        public void AdjacencyMatrix_listAdjacentVertexes_ShouldBeCorrect()
+        {
+            AdjacencyMatrixGraph am = new AdjacencyMatrixGraph(5, GraphType.Directed);
+            am.addEdge(1, 0);
+            am.addEdge(1, 2);
+            am.addEdge(1, 3);
+            am.addEdge(1, 4);
+            List<int> result = am.getAdjacentVertices(1);
+            List<int> expected = new List<int>();
+            expected.Add(0);
+            expected.Add(2);
+            expected.Add(3);
+            expected.Add(4);
+
+            Assert.True(result.SequenceEqual(expected));
+        }
+
+        [Fact]
+        public void AdjacencyMatrix_getInDegree_ShouldMatch()
+        {
+            AdjacencyMatrixGraph am = new AdjacencyMatrixGraph(5, GraphType.Directed);
+            am.addEdge(2, 1);
+            am.addEdge(4, 1);
+            var expected = am.GetInDegree(1);
+
+            Assert.Equal(expected, 2);
         }
     }
 }
