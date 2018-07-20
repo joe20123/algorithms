@@ -393,6 +393,9 @@ namespace AlgorithmsLibrary
                     }    
                 }
             }
+            if (q.Count != numbers)
+                throw new Exception("Error: input graph matrix is not acyclic.");
+
             return q.ToArray();
         }
 
