@@ -136,5 +136,24 @@ namespace Algorithms.Test
 
             Assert.Equal(expected, 2);
         }
+
+        [Fact]
+        public void Graph_TopologicalSort_ShouldOutputCorrectly()
+        {
+            AdjacencyMatrixGraph amg = new AdjacencyMatrixGraph(5, GraphType.Directed);
+            amg.addEdge(0, 1);
+            amg.addEdge(0, 2);
+            amg.addEdge(1, 3);
+            amg.addEdge(3, 2);
+            amg.addEdge(3, 4);
+            amg.addEdge(2, 4);
+
+            var expected = new int[]{0, 1, 3, 2, 4};
+
+            AlgorithmsLib a = new AlgorithmsLib();
+            var results = a.Graph_TopologicalSort(amg);
+
+            Assert.True(results.SequenceEqual(expected));
+        }
     }
 }

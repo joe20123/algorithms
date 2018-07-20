@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace AlgorithmsLibrary
 {
@@ -365,6 +367,36 @@ namespace AlgorithmsLibrary
             }
             return -1;
         }
+
+        // Q14: Topological Sort for Graph
+        public int[] Graph_TopologicalSort(AdjacencyMatrixGraph graph)
+        {
+            int numbers = graph.numVertices;
+            var q = new Queue<int>();
+
+            while (q.Count < numbers)
+            {
+                for (var i = 0; i < numbers; i++)
+                {
+                    if (q.Contains(i))
+                        continue;
+
+                    if (graph.GetInDegree(i) == 0)
+                    {
+                        q.Enqueue(i);
+                        var neighbours = graph.getAdjacentVertices(i);
+                        // remove edges starting from vertice i
+                        foreach (var j in neighbours)
+                        {
+                            graph.AdjacencyMatrix[i, j] = 0;
+                        }
+                    }    
+                }
+            }
+            return q.ToArray();
+        }
+
+
     }
 
 
