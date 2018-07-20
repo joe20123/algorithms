@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AlgorithmsLibGraph
+namespace AlgorithmsLibrary
 {
     public class AdjacencyMatrixGraph : IGraph
     {

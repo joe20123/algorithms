@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace AlgorithmsLibGraph
+namespace AlgorithmsLibrary
 {
     public interface IGraph
     {

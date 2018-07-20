@@ -1,4 +1,4 @@
-namespace AlgorithmsLibGraph
+namespace AlgorithmsLibrary
 {
     public enum GraphType
     {
