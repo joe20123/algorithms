@@ -400,6 +400,42 @@ namespace AlgorithmsLibrary
         }
 
 
+        // Q15:
+        public int makeAnagram(string a, string b) 
+        {
+
+            string start = a;
+            string end = b;
+            string end_origin = b;
+            if (a.Length > b.Length)
+            {
+                start = b;
+                end = a;
+                end_origin = a;
+            }
+        
+            var anagram = "";       
+            foreach (var i in start)
+            {
+                var index = -1;
+                foreach (var j in end)
+                {
+                    index += 1;
+                    if (i == j)
+                    {
+                        anagram += i;
+                        end = end.Remove(index, 1);
+                        
+                        break;
+                    }
+                }            
+            }
+            return (start.Length - anagram.Length + end_origin.Length - anagram.Length);
+
+        }
+
+
+
     }
 
 

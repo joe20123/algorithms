@@ -155,5 +155,47 @@ namespace Algorithms.Test
 
             Assert.True(results.SequenceEqual(expected));
         }
+
+        [Theory]
+        [InlineData(30, "fcrxzwscanmligyxyvym", "jxwtrhvujlmrpdoqbisbwhmgpmeoke")]
+        public void MakeAnagram_ShouldOutputCorrectNumber(
+            int expectedDeletedCharacters,
+            string a,
+            string b
+        )
+        {
+            AlgorithmsLib al = new AlgorithmsLib();
+            var result = al.makeAnagram(a, b);
+            
+            Assert.True(expectedDeletedCharacters == result);
+        }
+
+        [Fact]
+        public void BTree_BreadthTravelsal_ShouldOutputCorrectly()
+        {
+            var root = new Node<string>("A");
+            root.LeftChild = new Node<string>("B");
+            root.RightChild = new Node<string>("C");
+            root.LeftChild.LeftChild = new Node<string>("D");
+            root.LeftChild.RightChild = new Node<string>("E");
+            root.RightChild.LeftChild = new Node<string>("F");
+            root.RightChild.RightChild = new Node<string>("G");
+            root.LeftChild.LeftChild.LeftChild = new Node<string>("H");
+            root.RightChild.LeftChild.LeftChild = new Node<string>("I");
+            root.RightChild.RightChild.LeftChild = new Node<string>("J");
+
+            
+            var result = Node<string>.BreadthTravelsal(root);
+            var resultlist = new List<string>();
+            foreach (var e in result)
+                resultlist.Add(e.Data);
+                
+            var expected = new List<string>{"A", "B", "C", "D", 
+                                "E", "F", "G", "H", "I", "J"};
+
+            Assert.True(resultlist.SequenceEqual(expected));
+        }
+
+
     }
 }
