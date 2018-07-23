@@ -36,7 +36,31 @@ namespace AlgorithmsLibrary
             return output;
         }
 
+        public List<Node<T>> BTree_DepthFirstTravesal_PreOrder(Node<T> root)
+        {
+            if (root == null)
+                return null;
+            if (root.LeftChild == null && root.RightChild == null)
+                return new List<Node<T>>{root};
+            if (root.LeftChild == null)
+                root.LeftChild = root.RightChild;
 
+            var output = new List<Node<T>>();
+            var start = root;
+
+            while (BTree_anyLeftChild(start))
+            {
+                output.Add(start);
+                start = null;
+            }
+        }
+        private bool BTree_anyLeftChild(Node<T> input)
+        {
+            if (input.LeftChild == null)
+                return false;
+            BTree_anyLeftChild(input.LeftChild);
+            return true;
+        }
     }
 
 
