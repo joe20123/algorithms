@@ -57,15 +57,17 @@ namespace AlgorithmsLibrary
         // return the node where input node will be inserted under (header)
         public static Node<int> BST_insert(Node<int> head, Node<int> node)
         {
-            if (head == null)
+            if (head.LeftChild.Equals(node) || head.RightChild.Equals(node))
                 return head;
+            
             if (node.Data <= head.Data)
             {
-                head.LeftChild = BST_insert(head.LeftChild, node);
-            } else {
-                head.RightChild = BST_insert(head.RightChild, node);
+                BST_insert(head.LeftChild, node);
+            } 
+            else {
+                BST_insert(head.RightChild, node);
             }
-            return head;
+            return null;
         }
     }
 
