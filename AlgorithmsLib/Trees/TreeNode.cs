@@ -52,6 +52,21 @@ namespace AlgorithmsLibrary
             BTree_PreOrder(input.LeftChild, output);
             BTree_PreOrder(input.RightChild, output);
         }
+
+        // BST - Binary search tree
+        // return the node where input node will be inserted under (header)
+        public Node<int> BST_insert(Node<int> head, Node<int> node)
+        {
+            if (head == null)
+                return head;
+            if (node.Data <= head.Data)
+            {
+                head.LeftChild = BST_insert(head.LeftChild, node);
+            } else {
+                head.RightChild = BST_insert(head.RightChild, node);
+            }
+            return head;
+        }
     }
 
 
