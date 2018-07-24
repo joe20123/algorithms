@@ -216,5 +216,23 @@ namespace Algorithms.Test
 
             Assert.True(result.SequenceEqual(expected));
         }
+
+        [Fact]
+        public void BST_insert_ShouldReturnCorrectHeadNodeForInsertedNode()
+        {
+            var root = new Node<int>(8);
+            root.LeftChild = new Node<int>(6);
+            root.RightChild = new Node<int>(14);
+            root.LeftChild.LeftChild = new Node<int>(4);
+            root.LeftChild.RightChild = new Node<int>(7);
+            root.RightChild.RightChild = new Node<int>(16);
+            root.RightChild.RightChild.RightChild = new Node<int>(18);
+
+            var expected = root.RightChild.RightChild; // 16
+            var result = Node<int>.BST_insert(root, new Node<int>(15));
+
+            Assert.Equal(expected.Data, result.Data);
+
+        }
     }
 }

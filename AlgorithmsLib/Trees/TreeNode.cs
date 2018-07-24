@@ -55,7 +55,7 @@ namespace AlgorithmsLibrary
 
         // BST - Binary search tree
         // return the node where input node will be inserted under (header)
-        public Node<int> BST_insert(Node<int> head, Node<int> node)
+        public static Node<int> BST_insert(Node<int> head, Node<int> node)
         {
             if (head == null)
                 return head;
