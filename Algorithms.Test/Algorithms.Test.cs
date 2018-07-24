@@ -196,6 +196,25 @@ namespace Algorithms.Test
             Assert.True(resultlist.SequenceEqual(expected));
         }
 
+        [Fact]
+        public void BTree_DepthFirstTravesal_PreOrder_ShouldOutputCorrectly()
+        {
+            var root = new Node<string>("A");
+            root.LeftChild = new Node<string>("B");
+            root.RightChild = new Node<string>("C");
+            root.LeftChild.LeftChild = new Node<string>("D");
+            root.LeftChild.RightChild = new Node<string>("E");
+            root.RightChild.LeftChild = new Node<string>("F");
+            root.RightChild.RightChild = new Node<string>("G");
+            root.LeftChild.LeftChild.LeftChild = new Node<string>("H");
+            root.RightChild.LeftChild.LeftChild = new Node<string>("I");
+            root.RightChild.RightChild.LeftChild = new Node<string>("J");
 
+            var result = Node<string>.BTree_DepthFirstTravesal_PreOrder(root);
+            var expected = new List<string>{"A", "B", "D", "H", 
+                                "E", "C", "F", "I", "G", "J"};
+
+            Assert.True(result.SequenceEqual(expected));
+        }
     }
 }
