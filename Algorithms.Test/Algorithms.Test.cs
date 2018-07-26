@@ -218,7 +218,7 @@ namespace Algorithms.Test
         }
 
         [Fact]
-        public void BST_insert_ShouldReturnCorrectHeadNodeForInsertedNode()
+        public void BST_insert_Input_a_New_Node_ShouldReturnCorrectHeadNodeForInsertedNode()
         {
             var root = new Node<int>(8);
             root.LeftChild = new Node<int>(6);
@@ -232,6 +232,31 @@ namespace Algorithms.Test
             var result = Node<int>.BST_insert(root, new Node<int>(15));
 
             Assert.Equal(expected.Data, result.Data);
+
+        }
+
+        [Theory]
+        [InlineData(4, true)]
+        [InlineData(8, true)]
+        [InlineData(7, true)]
+        [InlineData(14, true)]
+        [InlineData(16, true)]
+        [InlineData(18, true)]
+        [InlineData(5, false)]
+        public void BST_NodeExists_Input_an_Existing_Node_ShouldReturnTrue(
+            int input, bool expected)
+        {
+            var root = new Node<int>(8);
+            root.LeftChild = new Node<int>(6);
+            root.RightChild = new Node<int>(14);
+            root.LeftChild.LeftChild = new Node<int>(4);
+            root.LeftChild.RightChild = new Node<int>(7);
+            root.RightChild.RightChild = new Node<int>(16);
+            root.RightChild.RightChild.RightChild = new Node<int>(18);
+
+            var result = Node<int>.BST_NodeExists(root, new Node<int>(input));
+
+            Assert.Equal(result, expected);
 
         }
     }

@@ -77,6 +77,28 @@ namespace AlgorithmsLibrary
             }
             return parent;
         }
+
+        public static bool BST_NodeExists(Node<int> head, Node<int> input)
+        {
+            if (head == null)
+                return false;
+
+            Node<int> current = head;
+            while (current != null)
+            {
+                if (input.Data == current.Data)
+                    return true;
+                if (input.Data < current.Data)
+                {
+                    current = current.LeftChild;
+                } 
+                else if (input.Data > current.Data)
+                {
+                    current = current.RightChild; 
+                }
+            }
+            return false;
+        }
     }
 
 
