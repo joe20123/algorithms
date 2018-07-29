@@ -259,5 +259,38 @@ namespace Algorithms.Test
             Assert.Equal(result, expected);
 
         }
+
+        [Fact]
+        public void BST_findMinNode_shouldReturnMinValueNode()
+        {
+            var root = new Node<int>(8);    
+            root.LeftChild = new Node<int>(6);
+            root.RightChild = new Node<int>(14);
+            root.LeftChild.LeftChild = new Node<int>(4);
+            root.LeftChild.RightChild = new Node<int>(7);
+            root.RightChild.RightChild = new Node<int>(16);
+            root.RightChild.RightChild.RightChild = new Node<int>(18);
+
+            var result = Node<int>.BST_findMinNode(root);
+            var expected = 4;
+            Assert.True(result == 4);
+        }
+
+        [Fact]
+        public void BST_max_depth_ShouldReturnMax()
+        {
+            var root = new Node<int>(8);    
+            root.LeftChild = new Node<int>(6);
+            root.RightChild = new Node<int>(14);
+            root.LeftChild.LeftChild = new Node<int>(4);
+            root.LeftChild.RightChild = new Node<int>(7);
+            root.RightChild.RightChild = new Node<int>(16);
+            root.RightChild.RightChild.RightChild = new Node<int>(18);
+
+            var result = Node<int>.BST_max_depth(root);
+            var expected = 3;
+
+            Assert.True(result == expected);
+        }
     }
 }

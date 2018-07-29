@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace AlgorithmsLibrary
 {
@@ -98,6 +99,49 @@ namespace AlgorithmsLibrary
                 }
             }
             return false;
+        }
+
+        public static int BST_findMinNode(Node<int> head) 
+        {
+            if (head == null) 
+                return -999;
+            if (head.LeftChild == null)
+                return -999;
+
+            var min = int.MaxValue;
+
+            var left = head.LeftChild;
+            while (left != null)
+            {
+                if (min > left.Data)
+                    min = left.Data;
+
+                left = left.LeftChild;
+            }
+            return min;
+
+        }
+
+        // max depth really means to find the max number
+        public static int BST_max_depth(Node<int> head)
+        {
+            if (head == null)
+                return -1;
+            var max = int.MinValue;
+
+            var current = head;
+            var counter = 0;
+
+            while (current.RightChild != null)
+            {
+                if (current.RightChild.Data > max)
+                {
+                    max = current.RightChild.Data;
+                    counter += 1;
+                }
+                current = current.RightChild;
+            }
+            return counter;
         }
     }
 
