@@ -143,6 +143,17 @@ namespace AlgorithmsLibrary
             }
             return counter;
         }
+
+        public static void BST_Mirror(Node<int> head)
+        {
+            if (head == null)
+                return;
+         
+            BST_Mirror(head.LeftChild);
+            BST_Mirror(head.RightChild);
+
+            (head.LeftChild, head.RightChild) = (head.RightChild, head.LeftChild);
+        }
     }
 
 

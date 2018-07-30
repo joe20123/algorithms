@@ -273,7 +273,7 @@ namespace Algorithms.Test
 
             var result = Node<int>.BST_findMinNode(root);
             var expected = 4;
-            Assert.True(result == 4);
+            Assert.True(result == expected);
         }
 
         [Fact]
@@ -291,6 +291,27 @@ namespace Algorithms.Test
             var expected = 3;
 
             Assert.True(result == expected);
+        }
+        [Fact]
+        public void BST_mirror_ShouldMirrorCorrectly()
+        {
+            var root = new Node<int>(8);    
+            root.LeftChild = new Node<int>(6);
+            root.RightChild = new Node<int>(14);
+            root.LeftChild.LeftChild = new Node<int>(4);
+            root.LeftChild.RightChild = new Node<int>(7);
+            root.RightChild.RightChild = new Node<int>(16);
+            root.RightChild.RightChild.RightChild = new Node<int>(18);
+
+            var expected = root;
+            Node<int>.BST_Mirror(expected);
+
+            Assert.Equal(expected.RightChild.Data, 6);
+            Assert.Equal(expected.LeftChild.Data, 14);
+            Assert.Equal(expected.LeftChild.LeftChild.Data, 16);
+            Assert.Equal(expected.RightChild.LeftChild.Data, 7);
+
+
         }
     }
 }
