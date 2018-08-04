@@ -154,6 +154,20 @@ namespace AlgorithmsLibrary
 
             (head.LeftChild, head.RightChild) = (head.RightChild, head.LeftChild);
         }
+
+        public static void BST_PrintRange(Node<int> head, int low, int high)
+        {
+            if (head == null) return;
+
+            if (low <= head.Data)
+                BST_PrintRange(head.LeftChild, low, high);
+            
+            if (low <= head.Data && head.Data <= high)
+                Console.WriteLine(head.Data);
+
+            if (high > head.Data)
+                BST_PrintRange(head.RightChild, low, high);
+        }
     }
 
 
