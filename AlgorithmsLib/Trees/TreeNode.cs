@@ -168,6 +168,17 @@ namespace AlgorithmsLibrary
             if (high > head.Data)
                 BST_PrintRange(head.RightChild, low, high);
         }
+
+        public static bool is_BinarySearchTree(Node<int> head, int min, int max)
+        {
+            if (head == null) return true;
+
+            if (head.Data <= min || head.Data > max)
+                return false;
+
+            return is_BinarySearchTree(head.LeftChild, min, head.Data)
+                && is_BinarySearchTree(head.RightChild, head.Data, max);
+        }
     }
 
 
