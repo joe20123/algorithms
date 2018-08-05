@@ -434,7 +434,13 @@ namespace AlgorithmsLibrary
 
         }
 
-
+        // get value at position n
+        public int Fabbonacci_getValueAtIndex(int n)
+        {
+            if (n == 0 || n == 1)
+                return 1;
+            return Fabbonacci_getValueAtIndex(n-2) + Fabbonacci_getValueAtIndex(n - 1);
+        }
 
     }
 

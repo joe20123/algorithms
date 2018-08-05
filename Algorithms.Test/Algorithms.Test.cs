@@ -170,6 +170,20 @@ namespace Algorithms.Test
             Assert.True(expectedDeletedCharacters == result);
         }
 
+        [Theory]
+        [InlineData(6, 13)]
+        [InlineData(7, 21)]
+        [InlineData(8, 34)]
+        [InlineData(3, 3)]
+        public void Fabbonacci_getValueAtIndex_ShouldOutputCorrectly(
+            int input, int expected
+        )
+        {
+            AlgorithmsLib al = new AlgorithmsLib();
+            var output = al.Fabbonacci_getValueAtIndex(input);
+            Assert.Equal(expected, output);
+        }
+
         [Fact]
         public void BTree_BreadthTravelsal_ShouldOutputCorrectly()
         {
