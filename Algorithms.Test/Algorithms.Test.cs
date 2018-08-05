@@ -329,5 +329,20 @@ namespace Algorithms.Test
             Assert.True(output);         
         }
 
+        [Fact]
+        public void BST_hasPathSum_ShouldReturnTrue()
+        {
+            var root = new Node<int>(8);    
+            root.LeftChild = new Node<int>(6);
+            root.RightChild = new Node<int>(14);
+            root.LeftChild.LeftChild = new Node<int>(4);
+            root.LeftChild.RightChild = new Node<int>(7);
+            root.RightChild.RightChild = new Node<int>(16);
+            root.RightChild.RightChild.RightChild = new Node<int>(18);
+
+            var output = Node<int>.BST_hasPathSum(root, 21);
+
+            Assert.True(output);            
+        }
     }
 }

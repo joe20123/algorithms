@@ -122,15 +122,19 @@ namespace AlgorithmsLibrary
 
         }
 
+        //?? need to revise
         // max depth really means to find the max number
         public static int BST_max_depth(Node<int> head)
         {
             if (head == null)
                 return -1;
             var max = int.MinValue;
+            var min = int.MaxValue;
 
             var current = head;
             var counter = 0;
+            var current_left = head;
+            var counter_left = 0;
 
             while (current.RightChild != null)
             {
@@ -141,7 +145,17 @@ namespace AlgorithmsLibrary
                 }
                 current = current.RightChild;
             }
-            return counter;
+
+            while (current_left.LeftChild != null)
+            {
+                if (current_left.LeftChild.Data <= min)
+                {
+                    max = current_left.LeftChild.Data;
+                    counter_left += 1;
+                }
+                current_left = current_left.LeftChild;
+            }
+            return Math.Max(counter, counter_left);
         }
 
         public static void BST_Mirror(Node<int> head)
@@ -179,6 +193,26 @@ namespace AlgorithmsLibrary
             return is_BinarySearchTree(head.LeftChild, min, head.Data)
                 && is_BinarySearchTree(head.RightChild, head.Data, max);
         }
+
+        public static bool BST_hasPathSum(Node<int> head, int sum)
+        {
+            if (head.LeftChild == null && head.RightChild == null)
+                return head.Data == sum;
+            
+            int subSum = sum - head.Data;
+            if(head.LeftChild != null)
+            {
+                if (BST_hasPathSum(head.LeftChild, subSum))
+                    return true;
+            }
+            if (head.RightChild != null)
+            {
+                if (BST_hasPathSum(head.RightChild, subSum))
+                    return true;
+            }
+            return false;
+        }
+
     }
 
 
