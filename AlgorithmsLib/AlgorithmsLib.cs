@@ -346,6 +346,7 @@ namespace AlgorithmsLibrary
         }
         
         // Q13: Binary Search. O(LogN)
+        // works on a sorted list
         public int BinarySearch(int[] input, int number)
         {
             if (input == null) return -1;

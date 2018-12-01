@@ -150,6 +150,16 @@ namespace AlgorithmsLibrary
         }
        #endregion
 
+    private void testcase()
+    {
+        string a = "a__123kd$$";
+        string[] pattern = {"__"};
+        string[] match = a.Split(pattern, StringSplitOptions.RemoveEmptyEntries);
+        foreach (var m in match)
+        {
+            Console.WriteLine($"{m}");
+        }
+    }
 #region Regex 
 
 
